@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.wangxiaojian.qq.MainActivity">
+    <!--AppBarLayout包裹的内容都作为AppBar-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <!--这里显示的是Toolbar-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite">
+                <Button
+                    android:id="@+id/btn_news"
+                    android:layout_width="49dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginStart="1dp"
+                    android:background="@color/colorPrimary"
+                    android:text="消息"/>
+                <Button
+                    android:id="@+id/btn_phone"
+                    android:layout_width="49dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="@color/colorWhite"
+                    android:textColor="@color/colorPrimary"
+                    android:text="电话"/>
+            </RelativeLayout>
+         </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+    <!--<include layout="@layout/content_main"/>-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        app:tabSelectedTextColor="@android:color/holo_blue_bright"
+        app:tabTextColor="@android:color/darker_gray"
+        app:tabIndicatorColor="@android:color/holo_red_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:layout_gravity="bottom"/>
+    <!--这里显示的是浮动的按钮-->
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--app:srcCompat="@mipmap/ic_add_circle_white_24dp"-->
+        <!--/>-->
+
+</android.support.design.widget.CoordinatorLayout>
